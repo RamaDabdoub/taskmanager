@@ -1,16 +1,1 @@
-# empty_code
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+I didn't notice the email until this morning because it was in the spam folder, so I couldn't complete all the tasks. I tried to finish them in one day. I used GetX state management and HMVC architecture, along with ListView.builder, Card, Container, and other basic widgets in Flutter. I didn't have enough time to complete all the design details correctly, and I only applied validation on the email input field. I faced difficulty with pagination as the API response was not in the format expected by the user model, and I didn't have enough time to troubleshoot further. I didn't work on unit tests previously, so I didn't implement them, but I aspire to learn them along with bloc state management. I tried my best to complete the tasks in one day, and I always strive for continuous improvement and learning. Thank you very much for your attention.

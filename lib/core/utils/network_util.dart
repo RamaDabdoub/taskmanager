@@ -8,7 +8,7 @@ import 'package:http_parser/http_parser.dart';
 
 
 class NetworkUtil {
-   static String baseUrl = 'fakestoreapi.com';
+   static String baseUrl = 'reqres.in';
   // static String baseUrl = 'fakestoreapi.com';
 
   // static String baseUrl = 'jsonplaceholder.typicode.com';
@@ -37,11 +37,7 @@ class NetworkUtil {
         response = await http.put(url, body: (body), headers: headers);
         break;
     }
-    if (response.statusCode == 401) {
-      //AnAUTH
-      // Get.to(LoginView()); // عمل لوغ ان جديد واخد التوكين
-      return; //وقف التنفيذ
-    }
+  
 
     Map<String, dynamic> jsonResponse = {};
     dynamic result;

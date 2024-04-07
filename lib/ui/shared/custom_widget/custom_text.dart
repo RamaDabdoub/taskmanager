@@ -1,6 +1,7 @@
 import 'package:empty_code/core/enums/text_style_type.dart';
 import 'package:empty_code/ui/shared/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 
 class Customtext extends StatelessWidget {
@@ -16,17 +17,17 @@ class Customtext extends StatelessWidget {
     super.key,
     required this.text,
     this.styleType = TextStyleType.BODY,
-    this.textColor = Colors.white,
+    this.textColor = Colors.black,
     this.fontWeight,
     this.fontSize, this.overFlow, this.maxLines,
   });
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+
     return Text(
       text,
-      style: getStyle(size),
+      style: getStyle(Get.size),
     );
   }
 
@@ -42,7 +43,7 @@ class Customtext extends StatelessWidget {
         break;
       case TextStyleType.SUBTITLE:
         result = TextStyle(
-            fontSize: screenWidth(22),
+            fontSize: screenWidth(20),
             fontWeight: fontWeight,
             color: textColor);
         break;
@@ -68,7 +69,7 @@ class Customtext extends StatelessWidget {
 
       default:
         result = TextStyle(
-            fontSize: size.width / 28,
+            fontSize: screenWidth(28),
             fontWeight: FontWeight.normal,
             color: textColor);
         break;

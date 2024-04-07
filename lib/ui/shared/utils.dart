@@ -3,6 +3,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:empty_code/core/data/repositry/shared_prefrence_repositry.dart';
 import 'package:empty_code/core/services/connectivity_service.dart';
 import 'package:empty_code/core/services/location_service.dart';
+import 'package:empty_code/core/services/task_service.dart';
 import 'package:empty_code/ui/shared/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -11,7 +12,7 @@ import 'package:get/get.dart';
 void customLoader() => BotToast.showCustomLoading(toastBuilder: (context) {
       return Container(
         decoration: BoxDecoration(
-            color: Color.fromARGB(255, 247, 103, 103).withOpacity(0.5),
+            color: AppColors.purpleColor.withOpacity(0.8),
             borderRadius: BorderRadius.circular(10)),
         width: screenWidth(4),
         height: screenWidth(4),
@@ -30,8 +31,9 @@ bool isEmailValid(String email) {
 }
 
 bool isComplexPassword(String password) {
-  RegExp regex = RegExp(r'^.*(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#\$&*~]).*$'
-      // r'^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$&*~]).{8,}$',
+  RegExp regex = RegExp(
+    // r'^.*(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#\$&*~]).*$'
+      r'^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$&*~]).{8,}$',
       );
   return regex.hasMatch(password);
 }
@@ -62,6 +64,6 @@ SharedPrefrenceRepository get storage => Get.find<
 ConnectivitySerivce get connectivitySerivce => Get.find<ConnectivitySerivce>();
 Connectivity get connectivity => Get.find<Connectivity>();
 LocationService get locationService => Get.find<LocationService>();
-// CartService get cartserivce => Get.find<CartService>();
+TaskService get taskserivce => Get.find<TaskService>();
 
 bool isOnline = false;

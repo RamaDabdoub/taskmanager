@@ -11,7 +11,7 @@ class NetworkConfig {
       // if (needAuth!) "Authorization": "Bearer ${storage.getTokenInfo().token}",
       if (type != RequestType.GET) "Content-Type": "application/json",
       if (extraHeaders != null) ...extraHeaders,
-      "Accept-Language": storage.getAppLanguage()
+      // "Accept-Language": storage.getAppLanguage()
     };
   }
 }
