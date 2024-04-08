@@ -71,7 +71,7 @@ class _LoginViewState extends State<LoginView> {
                                 if (value!.isEmpty)
                                   return " Please Enter Your Email ";
                                 else if (!isEmailValid(value))
-                                  return "يجب أن يحتوي اسم المستخدم على حروف الأبجدية العربية فقط";
+                                  return "Please Enter Valid Email ";
                               },
                             )),
                         SizedBox(
