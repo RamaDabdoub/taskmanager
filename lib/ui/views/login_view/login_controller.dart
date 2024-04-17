@@ -11,8 +11,8 @@ import 'package:get/get.dart';
 
 class LoginController extends GetxController {
   RxString passwordError = ''.obs;
-  TextEditingController emailController = TextEditingController();
-  TextEditingController codeController = TextEditingController();
+  TextEditingController emailController = TextEditingController(text: 'eve.holt@reqres.in');
+  TextEditingController codeController = TextEditingController(text: 'cityslicka');
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
   RxBool isLoading = false.obs;
 

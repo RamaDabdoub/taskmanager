@@ -25,7 +25,8 @@ class _TaskDetailsViewState extends State<TaskDetailsView> {
       Container(
         decoration: BoxDecoration(
           border: Border.all(color: AppColors.purpleColor),
-            borderRadius: BorderRadius.circular(15)),
+            borderRadius: BorderRadius.circular(15),
+            color: AppColors.whiteColor.withOpacity(0.86)),
        
         
         child: Padding(
@@ -35,6 +36,7 @@ class _TaskDetailsViewState extends State<TaskDetailsView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               CustomTextField(
+                boxsize: 1,
                 obscureText: false,
                 hintText: 'name',
                 controller: controller.nameController,
@@ -45,8 +47,9 @@ class _TaskDetailsViewState extends State<TaskDetailsView> {
               ),
         
               CustomTextField(
+                
                 obscureText: false,
-                 boxsize: screenWidth(4),
+                 boxsize: 6,
                 hintText: 'job',
                
                 controller: controller.jobController,

@@ -63,6 +63,7 @@ class _LoginViewState extends State<LoginView> {
                         SizedBox(
                             width: screenWidth(1),
                             child: CustomTextField(
+                              boxsize: 1,
                               prefixIcon: Icon(Icons.person_outlined),
                               obscureText: false,
                               hintText: 'email',
@@ -74,9 +75,11 @@ class _LoginViewState extends State<LoginView> {
                                   return "Please Enter Valid Email ";
                               },
                             )),
+
                         SizedBox(
                           height: screenWidth(20),
                         ),
+                      
                         Customtext(
                           text: 'Password ',
                           textColor: AppColors.purpleColor,
@@ -89,7 +92,7 @@ class _LoginViewState extends State<LoginView> {
                             width: screenWidth(1),
                             child: CustomTextField(
                               obscureText: true,
-                             
+                             boxsize: 1,
                               prefixIcon: Icon(Icons.key),
                               hintText: 'password ',
                               controller: controller.codeController,
